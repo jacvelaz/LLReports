@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Titillium Web', sans-serif;
+            background-color: #f0f0f0;
+        }
+        .dashboard-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .outer-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 20px;
+            max-width: 100%;
+            width: 650px;
+        }
+        .dashboard {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 0;
+            font-size: 24px;
+        }
+        .chart {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .bar {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .bar-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            padding: 5px 10px;
+        }
+        .bar-content {
+            display: flex;
+            height: 30px;
+        }
+        .bar-segment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .excellent { background-color: #4CAF50; }
+        .good { background-color: #2196F3; }
+        .regular { background-color: #FFC107; }
+
+        @media (min-width: 500px) {
+            .chart {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .bar {
+                width: 48%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="outer-container">
+            <div class="dashboard">
+                <h1>Performance Dashboard</h1>
+                <div class="chart">
+                    <div class="bar">
+                        <div class="bar-label">Banco</div>
+                        <div class="bar-content">
+                            <div class="bar-segment excellent" style="width: 27%;">27%</div>
+                            <div class="bar-segment good" style="width: 35%;">35%</div>
+                            <div class="bar-segment regular" style="width: 38%;">38%</div>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <div class="bar-label">SDS</div>
+                        <div class="bar-content">
+                            <div class="bar-segment excellent" style="width: 25%;">25%</div>
+                            <div class="bar-segment good" style="width: 28%;">28%</div>
+                            <div class="bar-segment regular" style="width: 47%;">47%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
